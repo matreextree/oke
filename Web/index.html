@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Website Dadakan</title>
+
+
+  <style>
+  .button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '!!!';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@font-face {
+    font-family: "My Custom Font";
+    src: url('special.woff') format("woff");
+}
+p.customfont { 
+    font-family: "My Custom Font", Verdana, Tahoma;
+}
+</style>
+<style type="text/css">
+@font-face {
+    font-family: "My Custom Font2";
+    src: url('Aljazeera.woff') format("woff");
+}
+p.customfont2 { 
+    font-family: "My Custom Font2", Verdana, Tahoma;
+}
+</style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <h1>Website Dadakan</h1>
+
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Page 1</a>
+        <a href="#">Page 2</a>
+        <a href="#">Page 3</a>
+      </div>
+    </div>
+
+    <div id="tabContainer">
+      <div id="tabs">
+        <ul>
+          <li id="tabHeader_1">Page 1</li>
+          <li id="tabHeader_2">Page 2</li>
+          <li id="tabHeader_3">Page 3</li>
+        </ul>
+      </div>
+    <div id="tabscontent">
+  <div class="tabpage" id="tabpage_1">
+  <h2>Page 1</h2>
+    <p class="customfont">Font Style 1</p>
+    <p class="customfont"><b>Font Style 1</b></p>
+    <p class="customfont2"><b>ÇåáÇ Èß</b></p>
+    <p class="customfont2">
+    Úä ØÑíÞ æÇÌåÉ Moolog íãßä áãÊÇÈÚíß ãÔÇåÏÉ ÌÏíÏ ÇáÊÏæíäÇÊ
+     ÇáãÖÇÝÉ Ýí ãÏæäÊß ãÚ ÅãßÇäíÉ ÇáÅØáÇÚ Úáì ÇáÊÏæíäÇÊ ÇáÃÞÏã Úä ØÑíÞ ÒÑ Íãá ÇáãÒ
+     íÏ .. æ ÈÇáÖÛØ Úáì ÇáÊÏæíäÉ íãßäå ÞÑÇÆÊåÇ Ãæ ÇáÅäÊÞÇá áÞÑÇÆÊåÇ ãÈÇÔÑÉ Úáì ãÏæäÊß .</p>
+
+  </div>
+<div class="tabpage" id="tabpage_2">
+  <h2>Page 2</h2>
+  <p>contoh isi/konten dari page2</p>
+</div>
+<div class="tabpage" id="tabpage_3">
+<h2>Page 3</h2>
+<p>contoh isi/konten dari page 3</p>
+</div>
+
+</div>
+<div style="border: 1px solid rgb(204, 204, 204); padding: 5px; overflow: auto; width: 200px; height: 50px;background-color: rgb(255, 255, 255);">Scroll tidak hanya bisa muncul ketika halaman website melebihi tinggi dari monitor saja, namun scroll bisa juga digunakan dalam sebuah tag div meskipun tingginya tidak melebihi lebar monitor.</div>
+
+</div>
+  
+
+
+</head>
+<body>
+
+<button class="button"><span>To Google</span></button>
+
+
+<script src="tabs_old.js"></script>
+ 
+</body>
+</html>
