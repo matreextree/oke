@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	
+		<head> 
+			<title> Ini Judul Testing </title>
+			<link href="css/style.css" type="text/css" rel="stylesheet">
+			<script src="../js/funct.js"></script>
+			<script>
+			
+				function openCity(evt, cityName) {
+					// Declare all variables
+					var i, tabcontent, tablinks;
+
+					// Get all elements with class="tabcontent" and hide them
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+
+					// Get all elements with class="tablinks" and remove the class "active"
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+
+					// Show the current tab, and add an "active" class to the link that opened the tab
+					document.getElementById(cityName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+				
+				/* When the user clicks on the button, 
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+							// Close the dropdown menu if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+								  var openDropdown = dropdowns[i];
+								  if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								  }
+								}
+							  }
+							}
+							
+							
+							
+							
+							
+// kick things off
+window.onload = createPieChart;
+function createPieChart() {
+	//
+	// create a PieChart.
+	// 
+	var pieChart = new PieChart( "piechart", 
+		{
+			includeLabels: true, 
+			data: [40, 250, 70],
+			labels: ["11%", "69.6%", "17.4%"],
+			colors: [
+            	["#FFDAB9", "#FFDAB9"],
+            	["#E6E6FA", "#E6E6FA"],
+            	["#E0FFFF", "#E0FFFF"]
+			]
+		}
+	);
+	//
+	// nothing appears until you call draw().
+	//
+	pieChart.draw();
+/*
+ * If you want to draw the labels separately, you can set
+ * includeLabels to false, and call drawLabel() for each
+ * pie chart segment.
+ *
+	for (var i = 0; i < pieChart.labels.length; i++) {
+		pieChart.drawLabel(i);
+	}
+ */
+/*
+ * If you want to select a segment to highight it, you can
+ * call select() for a given segment. Here's a little snippet
+ * that animates selecting each segment.
+ *
+	var segment = 0;
+	function nextSegment() {
+		pieChart.select(segment);
+		segment++;
+		if (segment < pieChart.data.length) {
+			setTimeout(nextSegment, 1000);
+		}
+	}
+	setTimeout(nextSegment, 1000);
+ */
+}
+									
+			</script>
+		</head>
+		
+		<body>
+		
+			<haeder>
+					<center>
+						<h1> Testing HTML+CSS+JAVASCRIPT</h1>
+					</center>	
+			</header>
+				<div class="dropdown">
+				  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+				  <div id="myDropdown" class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+			</div>
+				
+		
+		
+			<ul class="tab">
+	`			<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">London</a></li>
+				<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a></li>
+				<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</a></li>
+			</ul>
+
+		<div id="London" class="tabcontent">
+			  <h3>London</h3>
+			  <p>London is the capital city of England.</p>
+		</div>
+
+		<div id="Paris" class="tabcontent">
+			<h3>Paris</h3>
+			<p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="Tokyo" class="tabcontent">
+			  <h3>Tokyo</h3>
+			  <p>Tokyo is the capital of Japan.</p>
+		</div>
+		
+		<div style="width:150px; height:150px; line-height:3em; overflow:scroll; padding:5px;">
+			This 'div' element uses 'overflow:scroll' to create scrollbars. 
+		</div>
+		
+		<canvas id="piechart" width="400" height="400"></canvas>
+	</body>
+</html>
